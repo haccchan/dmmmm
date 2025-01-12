@@ -20,7 +20,7 @@ public class Spiel {
         spielerName = scanner.nextLine();
         System.out.println("Herzlich willkommen, " + spielerName);
         spieler = new Spieler(spielerName);
-        steam.Mitgliederhinzufugen(spieler);
+        
         System.out.println("Drücken Sie „Enter/Eingabetaste“, um unsere Reise zu beginnen.");
 
         //kapitel 0
@@ -33,6 +33,7 @@ public class Spiel {
         
         //Element wählen
         HinzufugenSpieler();
+        steam.Mitgliederhinzufugen(spieler);
         
         // entwicklen
         String[] dia3Text = Gesprach.dia3();
@@ -142,7 +143,7 @@ public class Spiel {
         }
     }
 	public void MCEntwickeln(Spieler spieler) {
-		System.out.println("Ihre Statistik: Gesundheit: " +  spieler.ges + " - Angriff: " + spieler.ang + " - Verteidigung: " + spieler.ver);
+		System.out.println("Ihre Statistik: Angriff: " + spieler.ang + " - Gesundheit: " +  spieler.ges + " - Verteidigung: " + spieler.ver);
         System.out.println("Sie haben die Chance, sich zu verbessern, indem Sie Ihre Statistik um 50 erhöhen.");
         int mal = 2;
         while (mal > 0) {
