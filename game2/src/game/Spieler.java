@@ -121,9 +121,10 @@ public class Spieler {
 				if(mitglieder[i].ges >= mitglieder[i].maxges) {
 					mitglieder[i].ges= mitglieder[i].maxges;
 				}
-				System.out.println("Alle Mitglieder werden geheilt.");
+				
 			}
 		}
+		System.out.println("Alle Mitglieder werden geheilt.");
 	}
 	public void Schilden(Spieler[] mitglieder) { // Die Schilddauer setzen
 		vermal = 3;

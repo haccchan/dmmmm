@@ -12,7 +12,7 @@ public class Feind {
     int vermal;
     Scanner sc = new Scanner(System.in);
 
-    public Feind(String fname, int ang, int ver, int ges, String element) {
+    public Feind(String fname, int ang, int ges, int ver, String element) {
         this.fname = fname;
         this.ang = ang;
         this.ver = ver;
@@ -90,9 +90,9 @@ public class Feind {
                 if (feinde[i].ges > feinde[i].maxges) {
                     feinde[i].ges = feinde[i].maxges;
                 }
-                System.out.println(feinde[i].fname + " wird geheilt um " + healAmount + " Gesundheit.");
             }
         }
+        System.out.println("Alle Feinde werden geheilt.");
     }
 
     public void Schilden(Feind[] feinde) {

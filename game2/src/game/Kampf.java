@@ -63,7 +63,7 @@ public class Kampf {
 	    while(!KampfEnde) {
 	        System.out.println("\nRunde(n) " + (runden + 1));
 	        System.out.println("Informationen des Chefs:");
-	        System.out.println("Oberhexe (Erde, Luft – " + chef.ang + " - " + chef.ges + " - " + chef.ver);
+	        System.out.println("Oberhexe (Erde, Luft – " + chef.ang + " - " + chef.ges + " - " + chef.ver + ")");
 	        
 	        for (int i = 0; i < steam.mitglieder.length; i++) {
 	            Spieler spieler = steam.mitglieder[i];
