@@ -19,7 +19,7 @@ public class Feinde {
 	}
 	
 	public void ERAktivieren() {
-		if (er.sprießen) {
+		if (er.wasser && er.luft) {
 			System.out.println("Sprießen (+20% GES) ist aktiviert für alle Feinde!");
             for (int i = 0; i < feinde.length; i++) {
                 if (feinde[i] != null && feinde[i].Leben()) {
@@ -28,7 +28,7 @@ public class Feinde {
                 }
             }
         }
-		if(er.brennen) {
+		if(er.feuer && er.luft) {
 			System.out.println("Brennen (+20% ANG) ist aktiviert für alle Feinde!");
 			for (int i = 0; i < feinde.length; i++) {
                 if (feinde[i] != null && feinde[i].Leben()) {
@@ -37,7 +37,7 @@ public class Feinde {
                 }
             }
 		}
-		if(er.beben) {
+		if(er.erde && er.luft) {
 			System.out.println("Beben (+20% VER) ist aktiviert für alle Feinde!");
 			for (int i = 0; i < feinde.length; i++) {
                 if (feinde[i] != null && feinde[i].Leben()) {
@@ -46,7 +46,7 @@ public class Feinde {
                 }
             }
 		}
-		if (er.verdampfen) {
+		if (er.feuer && er.wasser) {
 			System.out.println("Verdampfen (+10% GES, +10% ANG) ist aktiviert für alle Feinde!");
             for (int i = 0; i < feinde.length; i++) {
                 if (feinde[i] != null && feinde[i].Leben()) {
@@ -57,7 +57,7 @@ public class Feinde {
                 }
             }
         }
-		if (er.tropfen) {
+		if (er.wasser && er.erde) {
 			System.out.println("Tropfen (+10% GES, +10% VER) ist aktiviert für alle Feinde!");
             for (int i = 0; i < feinde.length; i++) {
                 if (feinde[i] != null && feinde[i].Leben()) {
@@ -68,7 +68,7 @@ public class Feinde {
                 }
             }
         }
-		if (er.uberladen) {
+		if (er.feuer && er.erde) {
 			System.out.println("Überladen (+10% ANG, +10% VER) ist aktiviert für alle Feinde!");
             for (int i = 0; i < feinde.length; i++) {
                 if (feinde[i] != null && feinde[i].Leben()) {

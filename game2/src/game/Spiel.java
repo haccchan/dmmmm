@@ -9,7 +9,6 @@ public class Spiel {
     Scanner scanner = new Scanner(System.in); 
     String spielerName; 
     Chef chef;
-    Elementarreaktion er;
 
     public Spiel() {
         steam = new Mitglieder();
@@ -175,19 +174,19 @@ public class Spiel {
     };
     fteam = new Feinde(feinde.length);
     fteam.Feindhinzufugen(feinde);
-    Kampf kampf1 = new Kampf(steam, fteam, er);
+    Kampf kampf1 = new Kampf(steam, fteam);
     kampf1.Anfang();
 }
 	public void Kampf1Kapitel2() {
 		Feind[] feinde = { new Feind("Hexe 1", 100, 1000, 0, "Feuer"), new Feind("Hexe 2", 100, 1000, 0, "Erde"), new Feind("Hexe 3", 100, 1000, 0, "Wasser") };
         fteam = new Feinde(feinde.length);
         fteam.Feindhinzufugen(feinde);
-        Kampf kampf2 = new Kampf(steam, fteam, er);
+        Kampf kampf2 = new Kampf(steam, fteam);
         kampf2.Anfang();
 	}
 	public void Kampfende() {
 		Chef chef = new Chef();
-		Kampf kampf3 = new Kampf(steam, fteam, er);
+		Kampf kampf3 = new Kampf(steam, fteam);
         kampf3.KampfEnde(chef);
 	}
 }

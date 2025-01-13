@@ -4,12 +4,10 @@ import java.util.Scanner;
 public class Kampf {
 	Mitglieder steam;
 	Feinde fteam;
-	Elementarreaktion er;
 	
-	public Kampf(Mitglieder steam, Feinde fteam, Elementarreaktion er) {
+	public Kampf(Mitglieder steam, Feinde fteam) {
 		this.steam = steam;
 		this.fteam = fteam;
-		this.er = er;
 	}
 	
 	public void Anfang() {

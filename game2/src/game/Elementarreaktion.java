@@ -24,6 +24,7 @@ public class Elementarreaktion {
 	        }
 	        neuteam[team.length] = element;
 	        team = neuteam;
+	        Elementprufen();
 	 }
 	public void Elemententfernen() {
 	    if (team.length == 3) { 
@@ -45,12 +46,6 @@ public class Elementarreaktion {
                 luft = true;
             }
         }
-		boolean sprießen = wasser && luft;
-		boolean beben = luft && erde;
-		boolean brennen = luft && feuer;
-		boolean verdampfen = wasser && feuer;
-		boolean tropfen = wasser && erde;
-		boolean uberladen = feuer && erde;
 	}
 
 }

@@ -119,6 +119,7 @@ public class Feind {
         int aktver = this.ver;
         if (vermal > 0) {
             aktver += 200;
+            System.out.println("Alle Feinde erleiden durch den Schild weniger Schaden.");
         }
         int fangs = (int)(sang * 100 / (aktver + 100));
         this.ges -= fangs;
