@@ -52,9 +52,6 @@ public class Spiel {
         
         Kampf1Kapitel1();
         
-        Spieler spielerduke = new Spieler("Duke");
-        spielerduke.setElement("Feuer");
-        steam.Mitgliederhinzufugen(spielerduke);
         
         String[] dia5Text = Gesprach.dia5();
         for (int i = 0; i < dia5Text.length; i++) {
@@ -62,6 +59,10 @@ public class Spiel {
             System.out.println(dia5);
             scanner.nextLine(); 
         }
+        
+        Spieler spielerduke = new Spieler("Duke");
+        spielerduke.setElement("Feuer");
+        steam.Mitgliederhinzufugen(spielerduke);
         
         Kampf1Kapitel2();
         
@@ -71,13 +72,16 @@ public class Spiel {
             System.out.println(dia6);
             scanner.nextLine(); 
            }
-            
-        // Kapitel 3
         
-        // Partner wählen
+     // Partner wählen
         Spieler spielercharlotte = new Spieler("Charlotte");
         spielercharlotte.setElement("Wasser");
         steam.Mitgliederhinzufugen(spielercharlotte);
+        
+        // Kapitel 3
+        
+        
+        
         
         System.out.println("Treffen Sie Ihre Entscheidung:");
         System.out.println("1. Duke (Feuer)");
