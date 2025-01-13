@@ -68,7 +68,7 @@ public class Chef {
     public void Angreifen(Spieler spieler) {
         int cangs = this.ang;
         spieler.Angegriffen(cangs);
-        System.out.println(cname + " verursacht " + cangs + " Schaden.");
+        System.out.println(cname + " verursacht " + cangs + " " + spieler.getName() + " Schaden.");
     }
     public void Angegriffen(int sang) {
         int aktver = this.ver;

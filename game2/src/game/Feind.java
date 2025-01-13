@@ -114,7 +114,7 @@ public class Feind {
             fangs = fangs * 3 / 4;
         }
         spieler.Angegriffen(fangs);
-        System.out.println(fname + " verursacht " + fangs + " Schaden.");
+        System.out.println(fname + " verursacht " + fangs + " " + spieler.getName() + " Schaden.");
     }
 
     public void Angegriffen(int sang) {
