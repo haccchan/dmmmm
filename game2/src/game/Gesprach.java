@@ -3,7 +3,7 @@ package game;
 public class Gesprach {
     public static String[] kapitel0() {
         return new String[] {
-            "Kapitel 0: Die Geschichte beginnt",
+        	"------------------------------------------\n|    Kapitel 0: Die Geschichte beginnt   |\n------------------------------------------",
             "Fee: [SpielerName]..?",
             "Wach auf! [SpielerName]!",
             "[SpielerName]: Wo bin ich?",
@@ -22,9 +22,9 @@ public class Gesprach {
             "Lilia: Wenn du Erde als dein Element wählst, wirst du zum Abschirmer und \nhast die Fähigkeit, um die Verteidigung Ihrer Verbündeten in 3 Runden zu erhöhen",
             "Lilia: Wenn du Feuer als dein Element wählst, wirst du zum Kanonier und \nhast die Fähigkeit, um 40% Chance auf einen kritischen Treffer, der doppelten Schaden verursacht, zu haben.",
             "Lilia: Wenn du Luft als dein Element wählst, wirst du zum Regler und \nhast die Fähigkeit, um alle Feinde gleichzeitig zu angreifen, aber den Schaden um 25% verringern",
-            "Jedes Element hat seine eigene Kraft und sie schwingen miteinander auch.",
-            "Es heißt Elementarreaktion. Der Elementarreaktion wird aktivieren, wenn Ihr Team über genügend der folgenden",
-            "Sprießen (Wasser + Luft): Erhöht 20% Ihre Gesundheit\nBeben (Erde + Luft) :Erhöht 20% Ihre Verteidigung\nBrennen (Feuer + Luft): Erhöht 20% Ihrer Angriff\nVerdampfen (Wasser + Feuer): Erhöht 10% Ihre Gesundheit & 10% Ihrer Angriff\nTropfen (Wasser + Erde): Erhöht 10% Ihre Gesundheit & 10% Ihre Verteidigung\nÜberladen (Feuer + Erde): Erhöht 10% Ihrer Angriff & 10% Ihre Verteidigung"
+            "Lilia: Jedes Element hat seine eigene Kraft und sie schwingen miteinander auch.",
+            "Lilia: Es heißt Elementarreaktion. Der Elementarreaktion wird aktivieren, wenn Ihr Team über genügend der folgenden",
+            "------------------------------------------\nSprießen (Wasser + Luft): Erhöht 20% Ihre Gesundheit\nBeben (Erde + Luft) :Erhöht 20% Ihre Verteidigung\nBrennen (Feuer + Luft): Erhöht 20% Ihrer Angriff\nVerdampfen (Wasser + Feuer): Erhöht 10% Ihre Gesundheit & 10% Ihrer Angriff\nTropfen (Wasser + Erde): Erhöht 10% Ihre Gesundheit & 10% Ihre Verteidigung\nÜberladen (Feuer + Erde): Erhöht 10% Ihrer Angriff & 10% Ihre Verteidigung\n------------------------------------------",
         };
     }
     public static String[] dia3() {
@@ -36,12 +36,12 @@ public class Gesprach {
     public static String[] dia4() {
         return new String[] {
         		"Lilia: Was für kluge Entscheidungen! \nLasst uns unser Abenteuer beginnen!",
-        		"Kapitel 1: Der erste Stein",
+        		"------------------------------------------\n|       Kapitel 1: Der erste Stein       |\n------------------------------------------",
         		"[SpielerName]: Wohin gehen wir?",
         		"Lilia: Ich kann hier einen Stein riechen",
         		"[SpielerName]: Riechen? Wie?",
         		"Lilia: Ich bin eine Fee, nicht du, \nalso wirst du es nicht verstehen!",
-        		"Dort drüben! Da sind zwei Wölfe, ein Stein halten! \nGreift sie an!",
+        		"Lilia: Dort drüben! Da sind zwei Wölfe, ein Stein halten! \nGreift sie an!",
 
          	};
     }
@@ -56,7 +56,7 @@ public class Gesprach {
         		"Lilia: Lass uns zusammenarbeiten. Sie kommen mit uns. \nSammeln Sie alle vier Steine, dann geben wir Ihnen den Feuerstein zurück.",
         		"Duke: Okay, Kooperation. Das ist es, was ich auch will.",
         		"Duke ist Ihrem Team beigetreten.",
-        		"Kapitel 2: Das harmonische Duo",
+        		"------------------------------------------\n|     Kapitel 2: Das harmonische Duo     |\n------------------------------------------",
         		"Duke: Das Mädchen hat also die Fähigkeit, \nElementarsteine ​​zu finden, oder? Wo ist der nächste?",
         		"Lilia: Ich bin kein kleines Mädchen! \nUnd ich habe nicht nur diese Fähigkeiten!",
         		"Duke: Wo dann?",
@@ -87,14 +87,14 @@ public static String[] dia6() {
     		"Lilia: [SpielerName] scheint ihre Erinnerungen \nzu verlieren, und das ist Duke, \nein Krieger, den wir auf unserem Weg traf, um [SpielerName]s Erinnerungen wiederherzustellen.",
     		"Aber jetzt ist es ziemlich spät, ich frage mich, \nob wir hier übernachten können?",
     		"Charlotte: Kein Problem, ihr geht rein.",
-    		"Kapitel 3: Wahl"
+    		"------------------------------------------\n|             Kapitel 3: Wahl            |\n------------------------------------------",
 };
 }
 public static String[] dia7() {
     return new String[] {
     		"Lilia: Ich glaube an deine Entscheidung, jetzt lasst uns sie informieren!",
     		"Sie geben Ihre Entscheidung allen bekannt. Alle arrangierten und \nbereiteten sich darauf vor, das Abenteuer fortzusetzen.",
-    		"Kapitel 4: Unser Traum",
+    		"------------------------------------------\n|         Kapitel 4: Unser Traum         |\n------------------------------------------",
     		"Du gehst weiter in diesem Wald. Die Begegnung mit Monstern und \nder Kampf gegen sie ist unvermeidlich. Nachdem man in Schlachten\n miteinander kooperiert, wird man nach und nach synchroner.",
     		"Lilia: Nach so vielen Schlachten konnten wir immer noch \nkeine Elementarsteine ​​mehr finden, während ich sie nur hier finden kann.",
     		"Lilia: Ist es das...",

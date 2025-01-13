@@ -7,12 +7,6 @@ public class Elementarreaktion {
 	boolean luft = false;
 	boolean feuer = false;
 	
-	boolean sprießen = false;
-	boolean verdampfen = false;
-	boolean beben = false;
-	boolean brennen = false;
-	boolean tropfen = false;
-	boolean uberladen = false;
 	
 	public Elementarreaktion() {
 		team = new String[0];
@@ -30,10 +24,16 @@ public class Elementarreaktion {
 	    if (team.length == 3) { 
 	        String[] neuteam = new String[1]; 
 	        neuteam[0] = team[0];
-	        team = neuteam; 
+	        team = neuteam;
+	        Elementprufen();
 	    }
 	}
 	public void Elementprufen() {
+		wasser = false; 
+		erde = false;
+		luft = false;
+		feuer = false;
+		
 		for (int i = 0; i < team.length; i++) {
             String element = team[i];
             if (element.equals("Wasser")) {

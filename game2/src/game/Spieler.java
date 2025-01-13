@@ -51,6 +51,7 @@ public class Spieler {
 	    }
 
 	public void SpielerMal(Feind[] feinde,Spieler[] mitglieder) { // die Aktionen, die der Spieler macht in seinem Mal
+		System.out.println("------------------------------------------");
 		System.out.println(sname + " (" + this.ang + " - " + this.ges + " - " + this.ver + ") ist dran!\nWählen Sie Ihre Aktion:");
 		System.out.println("1. Angreifen"); 
 		if(this.element.equals("Wasser")) {
@@ -80,6 +81,7 @@ public class Spieler {
 			}	
 		} else {
 			System.out.println("Ungültige Aktion. Sie haben Ihren Versuch verloren."); 
+			System.out.println("------------------------------------------");
 		}
 		if(vermal>0) { // Countdown der Schilddauer
 			vermal--;
@@ -101,6 +103,7 @@ public class Spieler {
 	}
 	
 	public void SingleAngreifen(Feind[] feinde) { // während greift der Spieler einzeln für die andere an.
+		System.out.println("------------------------------------------");
 		System.out.println("Wählen Sie den Gegner aus, den Sie angreifen möchten: ");
 		for(int i=0; i<feinde.length; i++) {
 			System.out.println(i+1 + ". " + feinde[i].fname);
@@ -110,6 +113,7 @@ public class Spieler {
 			Angreifen(feinde[target]);
 		} else {
 			System.out.println("Ungültige Aktion. Sie haben Ihren Versuch verloren."); 
+			System.out.println("------------------------------------------");
 		}
 		
 	}
@@ -145,8 +149,10 @@ public class Spieler {
 		}
 		feind.Angegriffen(sangf);
 		System.out.println(sname + " schafft einen Schaden mit dem Wert " + sangf + ".");
+		
 	}
 	public void SangC(Chef chef,Spieler[] mitglieder) { 
+		System.out.println("------------------------------------------");
 		System.out.println(sname + " (" + this.ang + " - " + this.ges + " - " + this.ver + ") ist dran! Wählen Sie Ihre Aktion:");
 		System.out.println("1. Angreifen"); 
 		if(this.element.equals("Wasser")) {
@@ -180,6 +186,7 @@ public class Spieler {
 			}	
 		} else {
 			System.out.println("Ungültige Aktion. Sie haben Ihren Versuch verloren."); 
+			System.out.println("------------------------------------------");
 		}
 		if(vermal>0) { 
 			vermal--;

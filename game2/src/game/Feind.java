@@ -49,6 +49,8 @@ public class Feind {
                 Heilen(feinde);
             } else if (element.equals("Erde")) {
                 Schilden(feinde);
+            } else {
+                SingleAngreifen(mitglieder);
             }
         }
         if (vermal > 0) {

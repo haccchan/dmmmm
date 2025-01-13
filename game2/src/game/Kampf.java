@@ -13,7 +13,9 @@ public class Kampf {
 	public void Anfang() {
 		int runden = 0;
 		boolean KampfEnde = false;
-		
+		System.out.println("------------------------------------------");
+		System.out.println("|           Der Kampf beginnt!           |");
+		System.out.println("------------------------------------------");
 		while(!KampfEnde) {
 			
 			 System.out.println("\nRunde(n) " + (runden + 1));
@@ -42,7 +44,9 @@ public class Kampf {
 	            runden++;
 	            
 	            if (KampfEnde) {
-	            	System.out.println("Kampf beendet!");
+	            	System.out.println("------------------------------------------");
+	        		System.out.println("|           Der Kampf beendet!           |");
+	        		System.out.println("------------------------------------------");
 	                if (steam.getMC().Leben()) {
 	                	NeuSetzen();
 	                    System.out.println(steam.getMC().getName() + " hat gewonnen!");
@@ -57,7 +61,10 @@ public class Kampf {
 	public void KampfEnde(Chef chef) {
 	    int runden = 0;
 	    boolean KampfEnde = false;
-	    
+	    System.out.println("------------------------------------------");
+		System.out.println("|           Der Kampf beginnt!           |");
+		System.out.println("------------------------------------------");
+		
 	    while(!KampfEnde) {
 	        System.out.println("\nRunde(n) " + (runden + 1));
 	        System.out.println("Informationen des Chefs:");
@@ -83,7 +90,9 @@ public class Kampf {
 	        runden++;
 
 	        if (KampfEnde) {
-	            System.out.println("\nKampf beendet!");
+	        	System.out.println("------------------------------------------");
+        		System.out.println("|           Der Kampf beendet!           |");
+        		System.out.println("------------------------------------------");
 	            if (steam.getMC().Leben()) {
 	                NeuSetzen();
 	                System.out.println(steam.getMC().getName() + " hat gewonnen!");
@@ -102,7 +111,7 @@ public class Kampf {
 	    }
 	 public void MCEntwickeln(Spieler spieler) {
 		 Scanner scanner = new Scanner(System.in);
-	        System.out.println("Wählen Sie den Wert aus, den Sie erhöhen möchten: ");
+	        System.out.println(">Wählen Sie den Wert aus, den Sie erhöhen möchten<");
 	        System.out.println("1. Angriff + 50");
 	        System.out.println("2. Gesundheit + 50");
 	        System.out.println("3. Verteidigung + 50");
@@ -119,7 +128,7 @@ public class Kampf {
 	        } else {
 	            System.out.println("Nicht verfügbare Auswahl. Sie haben Ihre Chance, Ihre Fähigkeiten zu erhöht, leider verpasst.");
 	        }
-	        System.out.println("Ihre Statistik: GES: " + spieler.ges + " - ANG: " + spieler.ang + " - Def: " + spieler.ver);
+	        System.out.println("Ihre Statistik: ANG: " + spieler.ang + " -  GES: " + spieler.ges + " - VER: " + spieler.ver);
 	 }
 	 public boolean Beenden() {
 	        boolean steamtot = true;

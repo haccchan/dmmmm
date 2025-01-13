@@ -15,8 +15,10 @@ public class Spiel {
     }
 
     public void Anfang() {
+    	System.out.println("------------------------------------------");
         System.out.println("Bitte geben Sie Ihren Namen ein:");
         spielerName = scanner.nextLine();
+        System.out.println("------------------------------------------");
         System.out.println("Herzlich willkommen, " + spielerName);
         spieler = new Spieler(spielerName);
         
@@ -59,7 +61,6 @@ public class Spiel {
             System.out.println(dia5);
             scanner.nextLine(); 
         }
-        
         Spieler spielerduke = new Spieler("Duke");
         spielerduke.setElement("Feuer");
         steam.Mitgliederhinzufugen(spielerduke);
@@ -72,22 +73,22 @@ public class Spiel {
             System.out.println(dia6);
             scanner.nextLine(); 
            }
+            
+        // Kapitel 3
         
-     // Partner wählen
+        // Partner wählen
         Spieler spielercharlotte = new Spieler("Charlotte");
         spielercharlotte.setElement("Wasser");
         steam.Mitgliederhinzufugen(spielercharlotte);
         
-        // Kapitel 3
-        
-        
-        
-        
+        System.out.println("------------------------------------------");
         System.out.println("Treffen Sie Ihre Entscheidung:");
         System.out.println("1. Duke (Feuer)");
         System.out.println("2. Charlotte (Wasser)");
+        System.out.println("------------------------------------------");
         
         steam.Mitgliederentfernen();
+        
         int swahl = scanner.nextInt();
         while(true) {
         	 if(swahl==1) {
@@ -125,6 +126,7 @@ public class Spiel {
 
 
 	public void HinzufugenSpieler() {
+	System.out.println("------------------------------------------");
 	System.out.println("Bitte wählen Sie es sorgfältig aus!\n1. Wasser\n2.Erde\n3.Feuer\n4.Luft");
        int wahl = scanner.nextInt();
         scanner.nextLine();
@@ -144,8 +146,10 @@ public class Spiel {
             System.out.println("Ungültige Wahl. Standardmäßig wird Ihr Element Wasser gesetzt.");
             spieler.setElement("Wasser");
         }
+        System.out.println("------------------------------------------");
     }
 	public void MCEntwickeln(Spieler spieler) {
+		System.out.println("------------------------------------------");
 		System.out.println("Ihre Statistik: Angriff: " + spieler.ang + " - Gesundheit: " +  spieler.ges + " - Verteidigung: " + spieler.ver);
         System.out.println("Sie haben die Chance, sich zu verbessern, indem Sie Ihre Statistik um 50 erhöhen.");
         int mal = 2;
@@ -168,6 +172,7 @@ public class Spiel {
                 System.out.println("Ungültige Auswahl. Sie haben Ihre Chance verpasst, Ihre Fähigkeiten zu verbessern.");
             }
             System.out.println("Ihre Statistik: Gesundheit: " +  spieler.ges + " - Angriff: " + spieler.ang + " - Verteidigung: " + spieler.ver);
+            System.out.println("------------------------------------------");
             mal--;
         }
 	}

@@ -24,7 +24,9 @@ public class Mitglieder {
 	        Spieler[] neuteam = new Spieler[1]; 
 	        neuteam[0] = mitglieder[0];
 	        mitglieder = neuteam; 
+	        er.Elemententfernen();
 	    }
+	    
 	}
 	public Spieler getMC(){
 		return mitglieder[0];

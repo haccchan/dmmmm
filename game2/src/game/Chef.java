@@ -35,6 +35,7 @@ public class Chef {
             }
       
         if (vermal > 0) {
+        	System.out.println("Die Oberhexe aktiviert ihren Schild"); 
             vermal--;
         }
     }
