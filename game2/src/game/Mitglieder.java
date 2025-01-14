@@ -103,7 +103,7 @@ public class Mitglieder {
 			System.out.println("Brennen (+20% ANG) ist aktiviert für alle Mitglieder!");
 			for (int i = 0; i < mitglieder.length; i++) {
                 if (mitglieder[i] != null && mitglieder[i].Leben()) {
-                    int starker = mitglieder[i].ang * 20 / 100;
+                    int starker = mitglieder[i].maxang * 20 / 100;
                     mitglieder[i].ang += starker;
                 }
             }
@@ -112,7 +112,7 @@ public class Mitglieder {
 			System.out.println("Beben (+20% VER) ist aktiviert für alle Mitglieder!");
 			for (int i = 0; i < mitglieder.length; i++) {
                 if (mitglieder[i] != null && mitglieder[i].Leben()) {
-                    int schild = mitglieder[i].ver * 20 / 100;
+                    int schild = mitglieder[i].maxver * 20 / 100;
                     mitglieder[i].ver += schild;
                 }
             }
@@ -123,7 +123,7 @@ public class Mitglieder {
                 if (mitglieder[i] != null && mitglieder[i].Leben()) {
                     int heil = mitglieder[i].maxges * 10 / 100;
                     mitglieder[i].ges += heil;
-                    int starker = mitglieder[i].ang * 20 / 100;
+                    int starker = mitglieder[i].maxang * 20 / 100;
                     mitglieder[i].ang += starker;
                 }
             }
@@ -134,7 +134,7 @@ public class Mitglieder {
                 if (mitglieder[i] != null && mitglieder[i].Leben()) {
                     int heil = mitglieder[i].maxges * 10 / 100;
                     mitglieder[i].ges += heil;
-                    int schild = mitglieder[i].ver * 10 / 100;
+                    int schild = mitglieder[i].maxver * 10 / 100;
                     mitglieder[i].ver += schild;
                 }
             }
@@ -143,9 +143,9 @@ public class Mitglieder {
 			System.out.println("Überladen (+10% ANG, +10% VER) ist aktiviert für alle Mitglieder!");
             for (int i = 0; i < mitglieder.length; i++) {
                 if (mitglieder[i] != null && mitglieder[i].Leben()) {
-                	int starker = mitglieder[i].ang * 20 / 100;
+                	int starker = mitglieder[i].maxang * 20 / 100;
                 	mitglieder[i].ang += starker;
-                    int schild = mitglieder[i].ver * 10 / 100;
+                    int schild = mitglieder[i].maxver * 10 / 100;
                     mitglieder[i].ver += schild;
                 }
             }
