@@ -77,9 +77,6 @@ public class Spiel {
         // Kapitel 3
         
         // Partner wählen
-        Spieler spielercharlotte = new Spieler("Charlotte");
-        spielercharlotte.setElement("Wasser");
-        steam.Mitgliederhinzufugen(spielercharlotte);
         
         System.out.println("------------------------------------------");
         System.out.println("Treffen Sie Ihre Entscheidung:");
@@ -90,6 +87,7 @@ public class Spiel {
         steam.Mitgliederentfernen();
         
         int swahl = scanner.nextInt();
+        
         while(true) {
         	 if(swahl==1) {
             	steam.Mitgliederhinzufugen(spielerduke);
@@ -97,7 +95,9 @@ public class Spiel {
             	break;
             } 
         	 if(swahl==2) {
-             	steam.Mitgliederhinzufugen(spielercharlotte);
+        		 Spieler spielercharlotte = new Spieler("Charlotte");
+        	     spielercharlotte.setElement("Wasser");
+        	     steam.Mitgliederhinzufugen(spielercharlotte);
              	System.out.println("Duke ist aus dem Team, Charlotte ist Ihrem Team beigetreten");
              	break;
              } else {
@@ -171,7 +171,7 @@ public class Spiel {
             } else {
                 System.out.println("Ungültige Auswahl. Sie haben Ihre Chance verpasst, Ihre Fähigkeiten zu verbessern.");
             }
-            System.out.println("Ihre Statistik: Gesundheit: " +  spieler.ges + " - Angriff: " + spieler.ang + " - Verteidigung: " + spieler.ver);
+            System.out.println("Ihre Statistik: - Angriff: " + spieler.ang + " Gesundheit: " +  spieler.ges + " - Verteidigung: " + spieler.ver);
             System.out.println("------------------------------------------");
             mal--;
         }
