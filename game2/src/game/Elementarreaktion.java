@@ -21,12 +21,11 @@ public class Elementarreaktion {
 	        Elementprufen();
 	 }
 	public void Elemententfernen() {
-	    if (team.length == 3) { 
-	        String[] neuteam = new String[1]; 
-	        neuteam[0] = team[0];
+	    String[] neuteam = new String[1]; 
+	    neuteam[0] = team[0];
 	        team = neuteam;
 	        Elementprufen();
-	    }
+	    
 	}
 	public void Elementprufen() {
 		wasser = false; 

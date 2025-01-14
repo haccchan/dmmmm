@@ -52,7 +52,7 @@ public class Spiel {
             scanner.nextLine(); 
         }
         
-        Kampf1Kapitel1();
+       Kampf1Kapitel1();
         
         
         String[] dia5Text = Gesprach.dia5();

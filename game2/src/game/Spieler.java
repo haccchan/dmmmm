@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Spieler {
 	String sname; // die Spielername
 	int maxges; // die maximale Spielergesundheit
+	int maxang; // der maximale Spielerangriff
+	int maxver; // die maximale Spielerverteidigung
 	int ang; // der Spielerangriff
 	int ver; // die Spielerverteidigung
 	int ges; // die aktuelliesierte Spielergesundheit
@@ -15,6 +17,8 @@ public class Spieler {
 	public Spieler(String sname) {
 		this.ang = 500; 
 		this.ver = 50;
+		this.maxang = 500; 
+		this.maxver = 50;
 		this.maxges = 500;
 		this.ges = maxges;
 		this.vermal =0;
@@ -48,6 +52,14 @@ public class Spieler {
 
 	    public int getMaxGesundheit() {
 	        return this.ges;
+	    }
+	    
+	    public int getMaxVerteidigung() {
+	        return this.ver;
+	    }
+	    
+	    public int getMaxAngriff() {
+	        return this.ang;
 	    }
 
 	public void SpielerMal(Feind[] feinde,Spieler[] mitglieder) { // die Aktionen, die der Spieler macht in seinem Mal
