@@ -19,71 +19,7 @@ public class Mitglieder {
         er.Elementhinzufugen(spieler.element);
         ERAktivieren();
     }
-	public void Mitgliederentfernen() {
-	    ERDeaktivieren();
-	    Spieler[] neuteam = new Spieler[1]; 
-	    neuteam[0] = mitglieder[0];
-	    mitglieder = neuteam; 
-	    er.Elemententfernen();
-	    
-	    
-	}
-	public void ERDeaktivieren() {
-		if (er.wasser && er.luft) {
-            for (int i = 0; i < mitglieder.length; i++) {
-                if (mitglieder[i] != null && mitglieder[i].Leben()) {
-                    int heil = mitglieder[i].maxges * 20 / 100;
-                    mitglieder[i].ges -= heil;
-                }
-            }
-        }
-		if(er.feuer && er.luft) {
-			for (int i = 0; i < mitglieder.length; i++) {
-                if (mitglieder[i] != null && mitglieder[i].Leben()) {
-                    int starker = mitglieder[i].maxang * 20 / 100;
-                    mitglieder[i].ang -= starker;
-                }
-            }
-		}
-		if(er.erde && er.luft) {
-			for (int i = 0; i < mitglieder.length; i++) {
-                if (mitglieder[i] != null && mitglieder[i].Leben()) {
-                    int schild = mitglieder[i].maxver * 20 / 100;
-                    mitglieder[i].ver -= schild;
-                }
-            }
-		}
-		if (er.feuer && er.wasser) {
-            for (int i = 0; i < mitglieder.length; i++) {
-                if (mitglieder[i] != null && mitglieder[i].Leben()) {
-                    int heil = mitglieder[i].maxges * 10 / 100;
-                    mitglieder[i].ges -= heil;
-                    int starker = mitglieder[i].maxang * 20 / 100;
-                    mitglieder[i].ang -= starker;
-                }
-            }
-        }
-		if (er.wasser && er.erde) {
-            for (int i = 0; i < mitglieder.length; i++) {
-                if (mitglieder[i] != null && mitglieder[i].Leben()) {
-                    int heil = mitglieder[i].maxges * 10 / 100;
-                    mitglieder[i].ges -= heil;
-                    int schild = mitglieder[i].maxver * 10 / 100;
-                    mitglieder[i].ver -= schild;
-                }
-            }
-        }
-		if (er.feuer && er.erde) {
-            for (int i = 0; i < mitglieder.length; i++) {
-                if (mitglieder[i] != null && mitglieder[i].Leben()) {
-                	int starker = mitglieder[i].maxang * 20 / 100;
-                	mitglieder[i].ang -= starker;
-                    int schild = mitglieder[i].maxver * 10 / 100;
-                    mitglieder[i].ver -= schild;
-                }
-            }
-        }
-	}
+	
 	
 	public Spieler getMC(){
 		return mitglieder[0];

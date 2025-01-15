@@ -20,13 +20,6 @@ public class Elementarreaktion {
 	        team = neuteam;
 	        Elementprufen();
 	 }
-	public void Elemententfernen() {
-	    String[] neuteam = new String[1]; 
-	    neuteam[0] = team[0];
-	        team = neuteam;
-	        Elementprufen();
-	    
-	}
 	public void Elementprufen() {
 		wasser = false; 
 		erde = false;

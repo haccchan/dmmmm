@@ -15,6 +15,7 @@ public class Spiel {
     }
 
     public void Anfang() {
+    	// diese weg werfen, aber ich mag diese Strich
     	System.out.println("------------------------------------------");
         System.out.println("Bitte geben Sie Ihren Namen ein:");
         spielerName = scanner.nextLine();
@@ -25,9 +26,12 @@ public class Spiel {
         System.out.println("Drücken Sie „Enter/Eingabetaste“, um unsere Reise zu beginnen.");
 
         //kapitel 0
+        
+        // nicht Duke, sondern die Name des Partners/der Partnerin
+        
         String[] kapitel0Text = Gesprach.kapitel0();
         for (int i = 0; i < kapitel0Text.length; i++) {
-            String kapitel0 = kapitel0Text[i].replace("[SpielerName]", spielerName);
+            String kapitel0 = kapitel0Text[i].replace("[SpielerName]", spielerName).replace("[WahlName]", "Duke");;
             System.out.println(kapitel0);
             scanner.nextLine(); 
         }
@@ -36,18 +40,43 @@ public class Spiel {
         HinzufugenSpieler();
         steam.Mitgliederhinzufugen(spieler);
         
-        // entwicklen
+        // Partner hinzufugen
+        
+        System.out.println("------------------------------------------");
+        System.out.println("Treffen Sie Ihre Entscheidung:");
+        System.out.println("1. Duke (Feuer)");
+        System.out.println("2. Charlotte (Wasser)");
+        System.out.println("------------------------------------------");
+        
+        int swahl = scanner.nextInt(); // hat im ersten Teil entschieden
+        
+        if(swahl==1) {
+        		 Spieler spielerduke = new Spieler("Duke");
+        	     spielerduke.setElement("Feuer");
+        	     steam.Mitgliederhinzufugen(spielerduke);
+            	
+            } 
+        	 if(swahl==2) {
+        		 Spieler spielercharlotte = new Spieler("Charlotte");
+        	     spielercharlotte.setElement("Wasser");
+        	     steam.Mitgliederhinzufugen(spielercharlotte);
+             	
+        	 }
+       
+        
+        
         String[] dia3Text = Gesprach.dia3();
         for (int i = 0; i < dia3Text.length; i++) {
-            String dia3 = dia3Text[i].replace("[SpielerName]", spielerName);
+            String dia3 = dia3Text[i].replace("[SpielerName]", spielerName).replace("[WahlName]", "Duke");;
             System.out.println(dia3);
             scanner.nextLine(); 
         }
+     // entwicklen
         MCEntwickeln(spieler);
         // Kapitel 1
         String[] dia4Text = Gesprach.dia4();
         for (int i = 0; i < dia4Text.length; i++) {
-            String dia4 = dia4Text[i].replace("[SpielerName]", spielerName);
+            String dia4 = dia4Text[i].replace("[SpielerName]", spielerName).replace("[WahlName]", "Duke");;
             System.out.println(dia4);
             scanner.nextLine(); 
         }
@@ -57,61 +86,25 @@ public class Spiel {
         
         String[] dia5Text = Gesprach.dia5();
         for (int i = 0; i < dia5Text.length; i++) {
-            String dia5 = dia5Text[i].replace("[SpielerName]", spielerName);
+            String dia5 = dia5Text[i].replace("[SpielerName]", spielerName).replace("[WahlName]", "Duke");;
             System.out.println(dia5);
             scanner.nextLine(); 
         }
-        Spieler spielerduke = new Spieler("Duke");
-        spielerduke.setElement("Feuer");
-        steam.Mitgliederhinzufugen(spielerduke);
+        
         
         Kampf1Kapitel2();
         
         String[] dia6Text = Gesprach.dia6();
         for (int i = 0; i < dia6Text.length; i++) {
-            String dia6 = dia6Text[i].replace("[SpielerName]", spielerName);
+            String dia6 = dia6Text[i].replace("[SpielerName]", spielerName).replace("[WahlName]", "Duke");;
             System.out.println(dia6);
             scanner.nextLine(); 
            }
             
         // Kapitel 3
         
-        // Partner wählen
         
-        System.out.println("------------------------------------------");
-        System.out.println("Treffen Sie Ihre Entscheidung:");
-        System.out.println("1. Duke (Feuer)");
-        System.out.println("2. Charlotte (Wasser)");
-        System.out.println("------------------------------------------");
         
-        steam.Mitgliederentfernen();
-        
-        int swahl = scanner.nextInt();
-        
-        while(true) {
-        	 if(swahl==1) {
-            	steam.Mitgliederhinzufugen(spielerduke);
-            	System.out.println("Die Aufstellung hat sich nicht geändert");
-            	break;
-            } 
-        	 if(swahl==2) {
-        		 Spieler spielercharlotte = new Spieler("Charlotte");
-        	     spielercharlotte.setElement("Wasser");
-        	     steam.Mitgliederhinzufugen(spielercharlotte);
-             	System.out.println("Duke ist aus dem Team, Charlotte ist Ihrem Team beigetreten");
-             	break;
-             } else {
-            	 System.out.print("Ungültige Auswahl. Bitte geben Sie nur 1 oder 2 ein.");
-            }
-        }
-        
-        // Kapitel 4
-        String[] dia7Text = Gesprach.dia7();
-        for (int i = 0; i < dia7Text.length; i++) {
-            String dia7 = dia7Text[i].replace("[SpielerName]", spielerName);
-            System.out.println(dia7);
-            scanner.nextLine(); 
-           }
         
         Kampfende();
         
@@ -121,6 +114,7 @@ public class Spiel {
             System.out.println(dialetzt);
             scanner.nextLine(); 
            }
+        	 
         
     }
 
